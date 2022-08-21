@@ -11,9 +11,10 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         minimumSize: Size(
-          Utils.getWidth(context) / 1.1,
-          Utils.getHeight(context) / 15,
+          Utils.getWidth(context) / 1.2,
+          Utils.getHeight(context) / 18,
         ),
       ),
       onPressed: () {

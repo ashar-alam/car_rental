@@ -1,4 +1,5 @@
 import 'package:car_rental/utils/StringManager.dart';
+import 'package:car_rental/widgets/button.dart';
 import 'package:car_rental/widgets/headText.dart';
 import 'package:flutter/material.dart';
 
@@ -79,7 +80,7 @@ class _OneWayState extends State<OneWay> {
               children: [
                 Container(
                   padding: EdgeInsets.all(
-                    Utils.getWidth(context) / 10.0,
+                    Utils.getWidth(context) / 15.0,
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -88,13 +89,14 @@ class _OneWayState extends State<OneWay> {
                       width: 2,
                     ),
                   ),
+                  child: const Icon(Icons.car_crash_outlined),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 Container(
                   padding: EdgeInsets.all(
-                    Utils.getWidth(context) / 10.0,
+                    Utils.getWidth(context) / 15.0,
                   ),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -102,6 +104,9 @@ class _OneWayState extends State<OneWay> {
                       // color: Colors.blue,
                       width: 2,
                     ),
+                  ),
+                  child: const Icon(
+                    Icons.car_crash,
                   ),
                 ),
               ],
@@ -151,24 +156,72 @@ class _OneWayState extends State<OneWay> {
                       ],
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
                     const Text(
                       "2000",
-                      style: TextStyle(fontSize: 30, color: Colors.blue),
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold),
                     ),
                     const Text(
-                      "22967",
+                      "2299",
                       style: TextStyle(fontSize: 20, color: Colors.red),
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         MyText(
                           title: StringManager.timeKm,
                           style: const TextStyle(color: Colors.black),
                         ),
+                        Container(
+                          padding:
+                              EdgeInsets.all(Utils.getHeight(context) / 70),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 2),
+                          ),
+                        ),
+                        MyText(
+                          title: "4 Seater",
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                        Container(
+                          padding:
+                              EdgeInsets.all(Utils.getHeight(context) / 70),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 2),
+                          ),
+                        ),
+                        MyText(
+                          title: "2 bags",
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                        Container(
+                          padding:
+                              EdgeInsets.all(Utils.getHeight(context) / 95),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 2),
+                          ),
+                          child: const Icon(
+                            Icons.ac_unit,
+                            size: 10,
+                          ),
+                        ),
+                        MyText(
+                          title: " AC",
+                          style: const TextStyle(color: Colors.black),
+                        ),
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    MyButton(title: StringManager.selectCar)
                   ],
                 ),
               ),
@@ -178,14 +231,30 @@ class _OneWayState extends State<OneWay> {
                 "Hello",
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
               ),
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                    "hey",
-                    style: TextStyle(fontWeight: FontWeight.w700),
-                  ),
-                )
-              ],
+              //   children: [
+              //     TabBar(
+              //       tabs: <Widget>[
+              //         Tab(
+              //           icon: Icon(Icons.cloud_outlined),
+              //         ),
+              //         Tab(
+              //           icon: Icon(Icons.beach_access_sharp),
+              //         ),
+              //         Tab(
+              //           icon: Icon(Icons.brightness_5_sharp),
+              //         ),
+              //       ],
+              //     ),
+              //   ],
+              //   // children:
+              //   //  <Widget>[
+              //   //   ListTile(
+              //   //     title: Text(
+              //   //       "hey",
+              //   //       style: TextStyle(fontWeight: FontWeight.w700),
+              //   //     ),
+              //   //   ),
+              //   // ],
             ),
           ],
         ),

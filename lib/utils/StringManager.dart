@@ -38,5 +38,5 @@ class StringManager {
   static const String ertiga = 'Ertiga';
   static const String rent = ' 2000 ';
   static const String carName = 'Toyota Etios or \n Equivalent';
-  static const String timeKm = '8hrs|80kms';
+  static const String timeKm = '8hrs|80kms \n Inclusive  of GST';
 }
