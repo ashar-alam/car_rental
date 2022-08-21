@@ -158,7 +158,7 @@ class _OneWayState extends State<OneWay> {
                       style: TextStyle(fontSize: 30, color: Colors.blue),
                     ),
                     const Text(
-                      "2299",
+                      "22967",
                       style: TextStyle(fontSize: 20, color: Colors.red),
                     ),
                     Row(
