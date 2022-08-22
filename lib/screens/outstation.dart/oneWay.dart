@@ -1,5 +1,5 @@
+import 'package:car_rental/screens/contactPickUp.dart';
 import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/button.dart';
 import 'package:car_rental/widgets/headText.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +26,9 @@ class _OneWayState extends State<OneWay> {
             Flexible(
               child: Row(
                 children: const [
-                  Icon(Icons.arrow_back),
+                  Icon(
+                    Icons.arrow_back,
+                  ),
                   SizedBox(
                     width: 100,
                   ),
@@ -221,7 +223,28 @@ class _OneWayState extends State<OneWay> {
                     const SizedBox(
                       height: 10,
                     ),
-                    MyButton(title: StringManager.selectCar)
+                    // MyButton(title: StringManager.selectCar),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        minimumSize: Size(
+                          Utils.getWidth(context) / 1.2,
+                          Utils.getHeight(context) / 18,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const MyContactAndPickup(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        StringManager.selectCar,
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -231,30 +254,27 @@ class _OneWayState extends State<OneWay> {
                 "Hello",
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
               ),
-              //   children: [
-              //     TabBar(
-              //       tabs: <Widget>[
-              //         Tab(
-              //           icon: Icon(Icons.cloud_outlined),
-              //         ),
-              //         Tab(
-              //           icon: Icon(Icons.beach_access_sharp),
-              //         ),
-              //         Tab(
-              //           icon: Icon(Icons.brightness_5_sharp),
-              //         ),
-              //       ],
-              //     ),
-              //   ],
-              //   // children:
-              //   //  <Widget>[
-              //   //   ListTile(
-              //   //     title: Text(
-              //   //       "hey",
-              //   //       style: TextStyle(fontWeight: FontWeight.w700),
-              //   //     ),
-              //   //   ),
-              //   // ],
+              children: [
+                TabBar(
+                  tabs: <Widget>[
+                    Tab(
+                      icon: Icon(Icons.cloud_outlined),
+                    ),
+                    Tab(
+                      icon: Icon(Icons.beach_access_sharp),
+                    ),
+                    Tab(
+                      icon: Icon(Icons.brightness_5_sharp),
+                    ),
+                  ],
+                ),
+                ListTile(
+                  title: Text(
+                    "hey",
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
