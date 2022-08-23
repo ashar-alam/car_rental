@@ -14,269 +14,521 @@ class OneWay extends StatefulWidget {
   State<OneWay> createState() => _OneWayState();
 }
 
-class _OneWayState extends State<OneWay> {
+class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(Utils.getWidth(context) / 90.0),
-        child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Flexible(
-              child: Row(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  Icon(
-                    Icons.arrow_back,
-                  ),
-                  SizedBox(
-                    width: 100,
-                  ),
+                  BackButton(),
                   Text(
                     StringManager.jaipurTonk,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25, color: Colors.blue),
-                  ),
-                  SizedBox(
-                    width: 70,
+                    style: TextStyle(fontSize: 20, color: Colors.blue),
                   ),
                   MyIconButton(),
                 ],
               ),
-            ),
-            const Text(
-              StringManager.dateTime,
-              style: TextStyle(fontSize: 15),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              StringManager.modifingBooking,
-              style: TextStyle(color: Colors.blue, fontSize: 18),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MyText(
-                  title: StringManager.sedan,
-                  style: const TextStyle(color: Colors.blue),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                MyText(
-                  title: StringManager.ertiga,
-                  style: const TextStyle(color: Colors.black),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  padding: EdgeInsets.all(
-                    Utils.getWidth(context) / 15.0,
+              const Text(
+                StringManager.dateTime,
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                StringManager.modifingBooking,
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MyText(
+                    title: StringManager.sedan,
+                    style: const TextStyle(color: Colors.blue),
                   ),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      // color: Colors.blue,
-                      width: 2,
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  MyText(
+                    title: StringManager.ertiga,
+                    style: const TextStyle(color: Colors.black),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color.fromARGB(255, 110, 201, 246),
+                        width: 2,
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.local_taxi,
+                      size: 40,
                     ),
                   ),
-                  child: const Icon(Icons.car_crash_outlined),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  padding: EdgeInsets.all(
-                    Utils.getWidth(context) / 15.0,
+                  const SizedBox(
+                    width: 10,
                   ),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      // color: Colors.blue,
-                      width: 2,
+                  Container(
+                    padding: const EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.grey,
+                        width: 2,
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.local_taxi,
+                      size: 40,
                     ),
                   ),
-                  child: const Icon(
-                    Icons.car_crash,
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MyText(
+                    title: StringManager.rent,
+                    style: const TextStyle(
+                      color: Color.fromARGB(255, 120, 216, 248),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MyText(
-                  title: StringManager.rent,
-                  style: const TextStyle(color: Colors.blue),
-                ),
-                const SizedBox(
-                  width: 50,
-                ),
-                MyText(
-                  title: StringManager.rent,
-                  style: const TextStyle(color: Colors.black),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: Utils.getHeight(context) / 2.5,
-              width: Utils.getWidth(context) / 1.1,
-              child: Card(
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  MyText(
+                    title: StringManager.rent,
+                    style: const TextStyle(color: Colors.black),
+                  ),
+                ],
+              ),
+              Card(
                 elevation: 5,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        MyText(
-                          title: StringManager.carName,
-                          style: const TextStyle(color: Colors.black),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Image.asset(
-                          AssetsManager.toyota,
-                          height: Utils.getHeight(context) / 6,
-                          width: Utils.getWidth(context) / 2,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Text(
-                      "2000",
-                      style: TextStyle(
-                          fontSize: 30,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    const Text(
-                      "2299",
-                      style: TextStyle(fontSize: 20, color: Colors.red),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MyText(
-                          title: StringManager.timeKm,
-                          style: const TextStyle(color: Colors.black),
-                        ),
-                        Container(
-                          padding:
-                              EdgeInsets.all(Utils.getHeight(context) / 70),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 2),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Flexible(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                MyText(
+                                  title: StringManager.carName,
+                                  style: const TextStyle(
+                                      color: Colors.black, fontSize: 20),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  "2000",
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      color: Color.fromARGB(255, 120, 216, 248),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  "2299",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.red),
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                MyText(
+                                  title: StringManager.timeKm,
+                                  style: const TextStyle(
+                                      color: Colors.black, fontSize: 12),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            flex: 2,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  AssetsManager.toyota,
+                                  height: Utils.getHeight(context) / 6,
+                                  width: Utils.getWidth(context) / 2,
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(4.0),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey),
+                                      ),
+                                      child: const Icon(
+                                          Icons.airline_seat_legroom_extra,
+                                          size: 12,
+                                          color: Colors.grey),
+                                    ),
+                                    MyText(
+                                      title: "4 Seater",
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 12),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(4.0),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey),
+                                      ),
+                                      child: const Icon(Icons.luggage,
+                                          size: 12, color: Colors.grey),
+                                    ),
+                                    MyText(
+                                      title: "2 bags",
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 12),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(4.0),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey),
+                                      ),
+                                      child: const Icon(Icons.ac_unit,
+                                          size: 12, color: Colors.grey),
+                                    ),
+                                    MyText(
+                                      title: " AC",
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      // MyButton(title: StringManager.selectCar),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          minimumSize: Size(
+                            Utils.getWidth(context) / 1.1,
+                            Utils.getHeight(context) / 18,
                           ),
                         ),
-                        MyText(
-                          title: "4 Seater",
-                          style: const TextStyle(color: Colors.black),
-                        ),
-                        Container(
-                          padding:
-                              EdgeInsets.all(Utils.getHeight(context) / 70),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 2),
-                          ),
-                        ),
-                        MyText(
-                          title: "2 bags",
-                          style: const TextStyle(color: Colors.black),
-                        ),
-                        Container(
-                          padding:
-                              EdgeInsets.all(Utils.getHeight(context) / 95),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 2),
-                          ),
-                          child: const Icon(
-                            Icons.ac_unit,
-                            size: 10,
-                          ),
-                        ),
-                        MyText(
-                          title: " AC",
-                          style: const TextStyle(color: Colors.black),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    // MyButton(title: StringManager.selectCar),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        minimumSize: Size(
-                          Utils.getWidth(context) / 1.2,
-                          Utils.getHeight(context) / 18,
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const MyContactAndPickup(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          StringManager.selectCar,
+                          style: TextStyle(fontSize: 15),
                         ),
                       ),
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const MyContactAndPickup(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        StringManager.selectCar,
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const ExpansionTile(
-              title: Text(
-                "Hello",
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
-              ),
-              children: [
-                TabBar(
-                  tabs: <Widget>[
-                    Tab(
-                      icon: Icon(Icons.cloud_outlined),
-                    ),
-                    Tab(
-                      icon: Icon(Icons.beach_access_sharp),
-                    ),
-                    Tab(
-                      icon: Icon(Icons.brightness_5_sharp),
-                    ),
-                  ],
-                ),
-                ListTile(
-                  title: Text(
-                    "hey",
-                    style: TextStyle(fontWeight: FontWeight.w700),
+                    ],
                   ),
                 ),
-              ],
-            ),
-          ],
+              ),
+              Card(
+                elevation: 5,
+                child: ExpansionTile(
+                  title: const Text(
+                    StringManager.fareDetials,
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black),
+                  ),
+                  children: [
+                    Column(
+                      children: [
+                        TabBar(
+                          unselectedLabelColor: Colors.black,
+                          labelColor: Colors.blue,
+                          tabs: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(2),
+                              ),
+                              child: const Tab(
+                                text: StringManager.inclusion,
+                              ),
+                            ),
+                            const Tab(
+                              text: StringManager.exclusion,
+                            )
+                          ],
+                          controller: _tabController,
+                          indicatorSize: TabBarIndicatorSize.tab,
+                        ),
+                        SizedBox(
+                          height: 200,
+                          child: TabBarView(
+                            controller: _tabController,
+                            children: [
+                              Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.all(4.0),
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: const Color.fromARGB(
+                                                      255, 169, 212, 247)),
+                                            ),
+                                            child: const Icon(
+                                                Icons.local_gas_station,
+                                                size: 15,
+                                                color: Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
+                                          MyText(
+                                              title: StringManager.fuelChange,
+                                              style: const TextStyle(
+                                                  color: Colors.black)),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.all(4.0),
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: const Color.fromARGB(
+                                                      255, 169, 212, 247)),
+                                            ),
+                                            child: const Icon(
+                                                Icons.sports_motorsports,
+                                                size: 15,
+                                                color: Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
+                                          MyText(
+                                              title:
+                                                  StringManager.driverAllowance,
+                                              style: const TextStyle(
+                                                  color: Colors.black)),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.all(4.0),
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: const Color.fromARGB(
+                                                      255, 169, 212, 247)),
+                                            ),
+                                            child: const Icon(Icons.receipt,
+                                                size: 15,
+                                                color: Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
+                                          MyText(
+                                              title: StringManager.gst,
+                                              style: const TextStyle(
+                                                  color: Colors.black)),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                width: 1,
+                                                color: const Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          child: const Icon(
+                                              Icons.payments_sharp,
+                                              size: 15,
+                                              color: Color.fromARGB(
+                                                  255, 169, 212, 247)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                            title: "Pay 13/km after 80kms",
+                                            style: const TextStyle(
+                                                color: Colors.black)),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                width: 1,
+                                                color: const Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          child: const Icon(
+                                              Icons.payments_sharp,
+                                              size: 15,
+                                              color: Color.fromARGB(
+                                                  255, 169, 212, 247)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                            title: "Pay 144/hrafter 8 hours",
+                                            style: const TextStyle(
+                                                color: Colors.black)),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                width: 1,
+                                                color: const Color.fromARGB(
+                                                    255, 169, 212, 247)),
+                                          ),
+                                          child: const Icon(Icons.car_crash,
+                                              size: 15,
+                                              color: Color.fromARGB(
+                                                  255, 169, 212, 247)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                            title: StringManager.tollTax,
+                                            style: const TextStyle(
+                                                color: Colors.black)),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                width: 1,
+                                                color: const Color.fromARGB(
+                                                    255, 150, 200, 242)),
+                                          ),
+                                          child: const Icon(
+                                              Icons.dark_mode_sharp,
+                                              size: 15,
+                                              color: Color.fromARGB(
+                                                  255, 150, 200, 242)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                            title: StringManager.nightAllowance,
+                                            style: const TextStyle(
+                                                color: Colors.black)),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

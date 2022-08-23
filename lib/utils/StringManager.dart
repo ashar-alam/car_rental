@@ -39,6 +39,15 @@ class StringManager {
   static const String rent = ' 2000 ';
   static const String carName = 'Toyota Etios or \n Equivalent';
   static const String timeKm = '8hrs|80kms \n Inclusive  of GST';
+  static const String fareDetials = 'Fare Detials';
+  static const String inclusion = 'Inclusions';
+  static const String exclusion = 'Exclusions';
+  static const String fuelChange = 'Fuel Changes';
+  static const String driverAllowance = 'Driver Allowance';
+  static const String gst = 'GST (5%)';
+  static const String tollTax = 'Toll/state tax';
+  static const String nightAllowance = 'Night Allowance';
+
   // ContactAndPickup Screen
   static const String title = 'Contact and Pickup...';
   static const String pickupAddress = 'PICKUP ADDRESS';
@@ -49,6 +58,7 @@ class StringManager {
   static const String pickupDateTime = 'Pick Up Date and Time:';
   static const String careType = 'Car Type';
   static const String totalFare = 'Total Fare';
+
 
 
 
