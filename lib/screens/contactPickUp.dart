@@ -1,3 +1,4 @@
+import 'package:car_rental/screens/paymentDetials.dart';
 import 'package:car_rental/utils/StringManager.dart';
 import 'package:car_rental/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
     return Scaffold(
       appBar: AppBarView().appBar(
         context,
-        title: StringManager.title,
+        title: StringManager.contactPickup,
         actions: [
           GestureDetector(
             onTap: () {
@@ -49,7 +50,7 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
             children: [
               SizedBox(
                 width: Utils.getWidth(context) / 1,
-                height: Utils.getHeight(context) / 3,
+                // height: Utils.getHeight(context) / 3,
                 child: Card(
                   elevation: 5,
                   child: Padding(
@@ -143,13 +144,13 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              // const SizedBox(
+              //   height: 20,
+              // ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
+                      borderRadius: BorderRadius.circular(10)),
                   minimumSize: Size(
                     Utils.getWidth(context) / 1,
                     Utils.getHeight(context) / 18,
@@ -158,7 +159,7 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const MyContactAndPickup(),
+                      builder: (context) => const MyPaymentDetials(),
                     ),
                   );
                 },
@@ -167,108 +168,108 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
-              // SizedBox(
-              //   width: Utils.getWidth(context) / 1,
-              //   height: Utils.getHeight(context) / 3,
-              Card(
-                elevation: 7,
-                child: ExpansionTile(
-                  title: const Text(
-                    StringManager.bookingDetials,
-                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              SizedBox(
+                width: Utils.getWidth(context) / 1,
+                // height: Utils.getHeight(context) / 1.5,
+                child: Card(
+                  elevation: 7,
+                  child: ExpansionTile(
+                    title: const Text(
+                      StringManager.bookingDetials,
+                      style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    ),
+                    children: <Widget>[
+                      ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.pickupCity,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                            MyText(
+                              title: "Jabalpur,Madhya Pardesh",
+                              style: const TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.tripType,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                            MyText(
+                              title: "Local 8 hrs|80kms",
+                              style: const TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.pickupDateTime,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                            MyText(
+                              title: "24-08-2022|01:00 PM",
+                              style: const TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.careType,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                            MyText(
+                              title: "Toyota Ertios or Equivalant",
+                              style: const TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.totalFare,
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            MyText(
+                              title: "1995",
+                              style: const TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  children: <Widget>[
-                    ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.pickupCity,
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                          MyText(
-                            title: "Jabalpur,Madhya Pardesh",
-                            style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.tripType,
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                          MyText(
-                            title: "Local 8 hrs|80kms",
-                            style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.pickupDateTime,
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                          MyText(
-                            title: "24-08-2022|01:00 PM",
-                            style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.careType,
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                          MyText(
-                            title: "Toyota Ertios or Equivalant",
-                            style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.totalFare,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          MyText(
-                            title: "1995",
-                            style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
                 ),
               ),
-              // ),
             ],
           ),
         ),

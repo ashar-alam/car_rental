@@ -1,4 +1,5 @@
 import 'package:car_rental/screens/outstation.dart/oneWay.dart';
+import 'package:car_rental/utils/AppStyle.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/utils.dart';
@@ -11,10 +12,11 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        primary: AppStyle.lightBlue,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         minimumSize: Size(
-          Utils.getWidth(context) / 1.2,
-          Utils.getHeight(context) / 18,
+          Utils.getWidth(context) / 1.1,
+          Utils.getHeight(context) / 20,
         ),
       ),
       onPressed: () {

@@ -124,7 +124,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                   MyText(
                     title: StringManager.rent,
                     style: const TextStyle(
-                      color: Color.fromARGB(255, 120, 216, 248),
+                      color: Color.fromARGB(255, 90, 225, 245),
                     ),
                   ),
                   const SizedBox(

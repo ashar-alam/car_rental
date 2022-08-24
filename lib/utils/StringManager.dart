@@ -22,14 +22,15 @@ class StringManager {
   static const String toAirport = 'To Airport';
   static const String city = 'CITY';
   static const String dropAddress = 'DROP ADDRESS';
+  // Account Screen
   static const String account = 'Account';
   static const String name = 'NAME';
   static const String mobile = 'MOBILE';
   static const String email = 'EMAIL';
   static const String update = 'Update';
   static const String signOut = 'Sign Out';
-  static const String forgotPassword = 'Forgot Password';
-  static const String booking = 'Booking';
+  static const String updatePassword = 'Update Password';
+  static const String booking = 'Bookings';
   // onWay screen
   static const String jaipurTonk = 'Jaipur - Tonk';
   static const String dateTime = '20-08-2022 | 12:00 AM';
@@ -49,7 +50,7 @@ class StringManager {
   static const String nightAllowance = 'Night Allowance';
 
   // ContactAndPickup Screen
-  static const String title = 'Contact and Pickup...';
+  static const String contactPickup = 'Contact and Pickup...';
   static const String pickupAddress = 'PICKUP ADDRESS';
   static const String proceed = 'Proceed';
   static const String bookingDetials = 'Your Booking Detials';
@@ -58,6 +59,15 @@ class StringManager {
   static const String pickupDateTime = 'Pick Up Date and Time:';
   static const String careType = 'Car Type';
   static const String totalFare = 'Total Fare';
+
+  // PaymnetDetials Screen
+  static const String paymentDetials = 'Payment Detials';
+  static const String payDuringTheTrip ='Pay driver during the trip(Rs 1915)';
+  static const String pay500Now = 'Pay Rs 500 now and rest during the trip';
+  static const String pay1000Now = 'Pay Rs 1000 now and rest during the trip';
+  static const String gotCoupon = 'Got a Coupon ?';
+  static const String booknow = 'Book Now';
+
 
 
 
