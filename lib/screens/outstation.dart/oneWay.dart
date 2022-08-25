@@ -162,7 +162,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                   "2000",
                                   style: TextStyle(
                                       fontSize: 30,
-                                      color: Color.fromARGB(255, 120, 216, 248),
+                                      color: Color.fromARGB(255, 100, 211, 248),
                                       fontWeight: FontWeight.bold),
                                 ),
                                 const SizedBox(
@@ -259,7 +259,8 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                           minimumSize: Size(
                             Utils.getWidth(context) / 1.1,
                             Utils.getHeight(context) / 18,
@@ -318,93 +319,100 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                           child: TabBarView(
                             controller: _tabController,
                             children: [
-                              Container(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: const EdgeInsets.all(4.0),
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                  width: 1,
-                                                  color: const Color.fromARGB(
-                                                      255, 169, 212, 247)),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
                                             ),
-                                            child: const Icon(
-                                                Icons.local_gas_station,
-                                                size: 15,
-                                                color: Color.fromARGB(
-                                                    255, 169, 212, 247)),
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          child: const Icon(
+                                            Icons.local_gas_station,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
                                           ),
-                                          MyText(
-                                              title: StringManager.fuelChange,
-                                              style: const TextStyle(
-                                                  color: Colors.black)),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: const EdgeInsets.all(4.0),
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                  width: 1,
-                                                  color: const Color.fromARGB(
-                                                      255, 169, 212, 247)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                          title: StringManager.fuelChange,
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
                                             ),
-                                            child: const Icon(
-                                                Icons.sports_motorsports,
-                                                size: 15,
-                                                color: Color.fromARGB(
-                                                    255, 169, 212, 247)),
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          child: const Icon(
+                                            Icons.sports_motorsports,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
                                           ),
-                                          MyText(
-                                              title:
-                                                  StringManager.driverAllowance,
-                                              style: const TextStyle(
-                                                  color: Colors.black)),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: const EdgeInsets.all(4.0),
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                  width: 1,
-                                                  color: const Color.fromARGB(
-                                                      255, 169, 212, 247)),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                          title: StringManager.driverAllowance,
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
                                             ),
-                                            child: const Icon(Icons.receipt,
-                                                size: 15,
-                                                color: Color.fromARGB(
-                                                    255, 169, 212, 247)),
                                           ),
-                                          const SizedBox(
-                                            width: 10,
+                                          child: const Icon(
+                                            Icons.receipt,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
                                           ),
-                                          MyText(
-                                              title: StringManager.gst,
-                                              style: const TextStyle(
-                                                  color: Colors.black)),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        MyText(
+                                          title: StringManager.gst,
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
                               Container(
@@ -420,23 +428,26 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             border: Border.all(
-                                                width: 1,
-                                                color: const Color.fromARGB(
-                                                    255, 169, 212, 247)),
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
+                                            ),
                                           ),
                                           child: const Icon(
-                                              Icons.payments_sharp,
-                                              size: 15,
-                                              color: Color.fromARGB(
-                                                  255, 169, 212, 247)),
+                                            Icons.payments_sharp,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
+                                          ),
                                         ),
                                         const SizedBox(
                                           width: 10,
                                         ),
                                         MyText(
-                                            title: "Pay 13/km after 80kms",
-                                            style: const TextStyle(
-                                                color: Colors.black)),
+                                          title: "Pay 13/km after 80kms",
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
                                       ],
                                     ),
                                     Row(
@@ -446,23 +457,26 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             border: Border.all(
-                                                width: 1,
-                                                color: const Color.fromARGB(
-                                                    255, 169, 212, 247)),
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
+                                            ),
                                           ),
                                           child: const Icon(
-                                              Icons.payments_sharp,
-                                              size: 15,
-                                              color: Color.fromARGB(
-                                                  255, 169, 212, 247)),
+                                            Icons.payments_sharp,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
+                                          ),
                                         ),
                                         const SizedBox(
                                           width: 10,
                                         ),
                                         MyText(
-                                            title: "Pay 144/hrafter 8 hours",
-                                            style: const TextStyle(
-                                                color: Colors.black)),
+                                          title: "Pay 144/hrafter 8 hours",
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
                                       ],
                                     ),
                                     Row(
@@ -472,22 +486,26 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             border: Border.all(
-                                                width: 1,
-                                                color: const Color.fromARGB(
-                                                    255, 169, 212, 247)),
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 169, 212, 247),
+                                            ),
                                           ),
-                                          child: const Icon(Icons.car_crash,
-                                              size: 15,
-                                              color: Color.fromARGB(
-                                                  255, 169, 212, 247)),
+                                          child: const Icon(
+                                            Icons.car_crash,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 169, 212, 247),
+                                          ),
                                         ),
                                         const SizedBox(
                                           width: 10,
                                         ),
                                         MyText(
-                                            title: StringManager.tollTax,
-                                            style: const TextStyle(
-                                                color: Colors.black)),
+                                          title: StringManager.tollTax,
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
                                       ],
                                     ),
                                     Row(
@@ -497,23 +515,26 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             border: Border.all(
-                                                width: 1,
-                                                color: const Color.fromARGB(
-                                                    255, 150, 200, 242)),
+                                              width: 1,
+                                              color: const Color.fromARGB(
+                                                  255, 150, 200, 242),
+                                            ),
                                           ),
                                           child: const Icon(
-                                              Icons.dark_mode_sharp,
-                                              size: 15,
-                                              color: Color.fromARGB(
-                                                  255, 150, 200, 242)),
+                                            Icons.dark_mode_sharp,
+                                            size: 15,
+                                            color: Color.fromARGB(
+                                                255, 150, 200, 242),
+                                          ),
                                         ),
                                         const SizedBox(
                                           width: 10,
                                         ),
                                         MyText(
-                                            title: StringManager.nightAllowance,
-                                            style: const TextStyle(
-                                                color: Colors.black)),
+                                          title: StringManager.nightAllowance,
+                                          style: const TextStyle(
+                                              color: Colors.black),
+                                        ),
                                       ],
                                     ),
                                   ],

@@ -20,17 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    print(add(5, 29));
-    print('${add(6, 7)}hello ');
+    // print(add(5, 29));
+    // print('${add(6, 7)}hello ');
     return Scaffold(
-      //  backgroundColor: AppStyle.purpleDark,
       appBar: AppBarView().appBar(
         context,
         actions: [
           GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, Routes.profile);
-            },
+            onTap: () {},
             child: Container(
               padding: EdgeInsets.all(
                 Utils.getWidth(context) / 80.0,
@@ -38,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  // color: AppStyle.greenDark,
                   color: Colors.white,
                   width: 1.5,
                 ),
@@ -78,6 +74,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 10,
                         ),
                         MyTextFormFeild(
+                          readOnly: true,
+                          // onTap: () => {
+                          //   showSearch(context: context, delegate: SearchDelegate())
+                          // },
                           title: 'Start typing city - e.g New Delhi',
                         ),
                         IconButton(
@@ -155,8 +155,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  int add(int x, int y) {
-    // int a = 4, b = 6;
-    return x + y;
-  }
+  // int add(int x, int y) {
+  //   // int a = 4, b = 6;
+  //   return x + y;
+  // }
 }

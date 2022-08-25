@@ -62,16 +62,24 @@ class StringManager {
 
   // PaymnetDetials Screen
   static const String paymentDetials = 'Payment Detials';
-  static const String payDuringTheTrip ='Pay driver during the trip(Rs 1915)';
+  static const String payDuringTheTrip = 'Pay driver during the trip(Rs 1915)';
   static const String pay500Now = 'Pay Rs 500 now and rest during the trip';
   static const String pay1000Now = 'Pay Rs 1000 now and rest during the trip';
   static const String gotCoupon = 'Got a Coupon ?';
   static const String booknow = 'Book Now';
+  static const String enterCouponCode = 'Enter coupon code';
+  static const String apply = 'Apply';
 
+  // UpdatePassword Screen
+  static const String oldPassword = 'OLD PASSWORD';
+  static const String newPassword = 'NEW PASSWORD';
+  static const String retypeNewPassword = 'RETYPE NEW PASSWORD';
+  static const String enterYourOldPassword = 'Enter your old password';
+  static const String enterYourNewPassword = 'Enter your new  password';
+  static const String retypeYourNewPassword = 'Retype your new password';
 
-
-
-
- 
-
+  //Booking Status
+  static const String upconing = 'Upcoming';
+  static const String current = 'Current';
+  static const String history = 'History';
 }

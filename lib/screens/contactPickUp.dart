@@ -144,9 +144,9 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                   ),
                 ),
               ),
-              // const SizedBox(
-              //   height: 20,
-              // ),
+              const SizedBox(
+                height: 15,
+              ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -168,9 +168,9 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              // const SizedBox(
-              //   height: 20,
-              // ),
+              const SizedBox(
+                height: 15,
+              ),
               SizedBox(
                 width: Utils.getWidth(context) / 1,
                 // height: Utils.getHeight(context) / 1.5,

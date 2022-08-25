@@ -1,3 +1,5 @@
+import 'package:car_rental/screens/authentication/updatePassword.dart';
+import 'package:car_rental/screens/booking.dart';
 import 'package:car_rental/utils/AppStyle.dart';
 import 'package:car_rental/utils/StringManager.dart';
 import 'package:car_rental/utils/utils.dart';
@@ -21,6 +23,15 @@ class _MyAccountState extends State<MyAccount> {
         context,
         title: StringManager.account,
         actions: [],
+      ),
+      bottomNavigationBar: const BottomAppBar(
+        color: AppStyle.lightBlue,
+        child: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+            "For any feedback or concerns related to your booking,\n please mail us at orders@savari.com or call us at\n 9625108154",
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(Utils.getWidth(context)) / 20,
@@ -85,7 +96,12 @@ class _MyAccountState extends State<MyAccount> {
                     textStyle: const TextStyle(
                         fontSize: 15, fontWeight: FontWeight.w500),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const MyUpdatePassword()),
+                    );
+                  },
                   child: const Text(
                     StringManager.updatePassword,
                     style: TextStyle(color: AppStyle.lightBlue),
@@ -107,22 +123,13 @@ class _MyAccountState extends State<MyAccount> {
                   Utils.getHeight(context) / 20,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const MyBooking()));
+              },
               child: const Text(
                 StringManager.booking,
                 style: TextStyle(color: AppStyle.lightBlue),
-              ),
-            ),
-            const SizedBox(
-              height: 200,
-            ),
-            const BottomAppBar(
-              color: AppStyle.lightBlue,
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text(
-                  "For any feedback or concerns related to your booking,\n please mail us at orders@savari.com or call us at\n 9625108154",
-                ),
               ),
             ),
           ],
