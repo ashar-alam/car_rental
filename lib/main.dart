@@ -1,6 +1,7 @@
 import 'package:car_rental/utils/Routes.dart';
 import 'package:car_rental/utils/RoutesManager.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +10,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  @override 
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Car Rental',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: RoutesManager.generateRoute,
       initialRoute: Routes.dashboard,
+      theme: ThemeData(
+        fontFamily: GoogleFonts.ubuntu().fontFamily,
+      ),
       // home: HomePage(title: 'Flutter Demo'),
     );
   }

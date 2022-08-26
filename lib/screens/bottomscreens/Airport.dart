@@ -5,6 +5,7 @@ import 'package:car_rental/widgets/iconButton.dart';
 import 'package:car_rental/widgets/toggleButton.dart';
 import 'package:flutter/material.dart';
 
+import '../../utils/AppStyle.dart';
 import '../../utils/utils.dart';
 import '../../widgets/AppBarView.dart';
 import '../../widgets/textFormFeild.dart';
@@ -22,6 +23,7 @@ class _AirportState extends State<Airport> {
     return Scaffold(
       appBar: AppBarView().appBar(
         context,
+        title: StringManager.airportCabs,
         actions: [
           GestureDetector(
             onTap: () {
@@ -42,116 +44,140 @@ class _AirportState extends State<Airport> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(Utils.getWidth(context) / 20),
-          child: Column(
-            children: [
-              MyText(
-                title: StringManager.relibleAirportPickUpDrops,
-                style: const TextStyle(color: Colors.blue),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              MyToggleButton(
-                  title: StringManager.fromAirport,
-                  title1: StringManager.toAirport),
-              const SizedBox(
-                height: 20,
-              ),
-              Form(
-                  child: Column(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(Utils.getWidth(context) / 20),
+              child: Column(
                 children: [
-                  Row(
+                  MyText(
+                    title: StringManager.relibleAirportPickUpDrops,
+                    style: const TextStyle(
+                        color: AppStyle.lightBlue, fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  MyToggleButton(
+                      title: StringManager.fromAirport,
+                      title1: StringManager.toAirport),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Form(
+                      child: Column(
                     children: [
-                      const Text(StringManager.city),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Flexible(
-                        child: TextFormField(
-                          decoration: const InputDecoration(
-                              hintText: 'Start typing city - e.g New Delhi'),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.clear),
+                      Row(
+                        children: [
+                          const Text(
+                            StringManager.city,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Flexible(
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                  hintText:
+                                      'Start typing city - e.g New Delhi'),
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.highlight_off),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          )
+                        ],
                       ),
                       const SizedBox(
                         height: 10,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      const Text(StringManager.dropAddress),
-                      const SizedBox(
-                        width: 10,
                       ),
-                      Flexible(
-                        child: TextFormField(
-                          decoration: const InputDecoration(
-                              hintText: 'Start typing city - e.g New Delhi'),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.location_on),
+                      Row(
+                        children: [
+                          const Text(
+                            StringManager.dropAddress,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Flexible(
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                  hintText: StringManager.enterYourAddress),
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.room_outlined),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          )
+                        ],
                       ),
                       const SizedBox(
                         height: 10,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      const Text(StringManager.pickUp),
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            StringManager.pickUp,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          MyTextFormFeild(
+                            title: '30-09-2022',
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.calendar_month_outlined),
+                          )
+                        ],
+                      ),
                       const SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
-                      MyTextFormFeild(
-                        title: 'pickUp date',
+                      Row(
+                        children: [
+                          const Text(
+                            StringManager.pickUpAt,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          MyTextFormFeild(
+                            title: '12 :00 PM',
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.schedule),
+                          )
+                        ],
                       ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.calendar_today_rounded),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      const Text(StringManager.pickUpAt),
                       const SizedBox(
-                        width: 10,
+                        height: 30,
                       ),
-                      MyTextFormFeild(
-                        title: 'pickUp date',
+                      MyButton(
+                        title: StringManager.selectCar,
                       ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.lock_clock),
-                      )
                     ],
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  MyButton(
-                    title: StringManager.selectCar,
-                  ),
+                  ))
                 ],
-              ))
-            ],
+              ),
+            ),
           ),
         ),
       ),

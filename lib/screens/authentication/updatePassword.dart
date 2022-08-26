@@ -34,19 +34,32 @@ class _MyUpdatePasswordState extends State<MyUpdatePassword> {
                   width: Utils.getWidth(context) / 1,
                   height: Utils.getHeight(context) / 3.2,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      const Text(
+                        StringManager.oldPassword,
+                        style: TextStyle(
+                            color: AppStyle.black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15),
+                      ),
                       const TextField(
                         decoration: InputDecoration(
                           // border: OutlineInputBorder(),
                           hintText: "Enter your old password",
-                          label: Text(StringManager.oldPassword),
-                          labelStyle: TextStyle(
-                              color: AppStyle.black,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 15),
+                          // label: Text(StringManager.oldPassword),
+                          // labelStyle: TextStyle(
+                          //    ),
                           hintStyle: TextStyle(color: AppStyle.grey),
                         ),
+                      ),
+                      const Text(
+                        StringManager.newPassword,
+                        style: TextStyle(
+                            color: AppStyle.black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15),
                       ),
                       TextField(
                         obscuringCharacter: '*',
@@ -65,24 +78,20 @@ class _MyUpdatePasswordState extends State<MyUpdatePassword> {
                             ),
                           ),
                           hintText: "Enter your new password",
-                          label: const Text(StringManager.newPassword),
-                          labelStyle: const TextStyle(
-                            color: AppStyle.black,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15,
-                          ),
                           hintStyle: const TextStyle(color: AppStyle.grey),
                         ),
                         obscureText: _secureText,
                       ),
+                      const Text(
+                        StringManager.retypeNewPassword,
+                        style: TextStyle(
+                            color: AppStyle.black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15),
+                      ),
                       const TextField(
                         decoration: InputDecoration(
                           hintText: "Retype your new password",
-                          label: Text(StringManager.retypeNewPassword),
-                          labelStyle: TextStyle(
-                              color: AppStyle.black,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 15),
                           hintStyle: TextStyle(color: AppStyle.grey),
                         ),
                       ),

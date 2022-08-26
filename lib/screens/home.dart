@@ -1,3 +1,4 @@
+import 'package:car_rental/utils/AppStyle.dart';
 import 'package:car_rental/utils/StringManager.dart';
 import 'package:car_rental/widgets/button.dart';
 import 'package:car_rental/widgets/headText.dart';
@@ -25,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBarView().appBar(
         context,
+        title: StringManager.outStationCabs,
         actions: [
           GestureDetector(
             onTap: () {},
@@ -35,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: Colors.white,
+                  color: Colors.transparent,
                   width: 1.5,
                 ),
               ),
@@ -45,102 +47,139 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(Utils.getWidth(context) / 20),
-          child: Column(
-            children: [
-              MyText(
-                title: StringManager.indiasPremierIntercityCabs,
-                style: const TextStyle(color: Colors.blue),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              MyToggleButton(
-                title: StringManager.oneWay,
-                title1: StringManager.roundTrip,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Form(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Row(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            elevation: 5,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MyText(
+                    title: StringManager.indiasPremierIntercityCabs,
+                    style: const TextStyle(
+                        color: AppStyle.lightBlue, fontWeight: FontWeight.w600),
+                  ),
+                  MyToggleButton(
+                    title: StringManager.oneWay,
+                    title1: StringManager.roundTrip,
+                  ),
+                  Form(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text(StringManager.from),
-                        const SizedBox(
-                          width: 10,
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Text(
+                              StringManager.from,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            MyTextFormFeild(
+                              readOnly: true,
+                              // onTap: () => {
+                              //   showSearch(context: context, delegate: SearchDelegate())
+                              // },
+                              title: 'Start typing city - e.g New Delhi',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.highlight_off),
+                            )
+                          ],
                         ),
-                        MyTextFormFeild(
-                          readOnly: true,
-                          // onTap: () => {
-                          //   showSearch(context: context, delegate: SearchDelegate())
-                          // },
-                          title: 'Start typing city - e.g New Delhi',
+                        Row(
+                          children: [
+                            const Text(
+                              StringManager.to,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            MyTextFormFeild(
+                              title: 'Start typing city - e.g New Delhi',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.highlight_off),
+                            )
+                          ],
                         ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.clear),
+                        Row(
+                          children: [
+                            const Text(
+                              StringManager.pickUp,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            MyTextFormFeild(
+                              title: 'pickUp date',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.calendar_month),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              StringManager.pickUpAt,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            MyTextFormFeild(
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.schedule,
+                              ),
+                            )
+                          ],
+                        ),
+                        MyButton(
+                          title: StringManager.selectCar,
                         )
                       ],
                     ),
-                    const SizedBox(height: 10),
-                    Row(
-                      children: [
-                        const Text(StringManager.to),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        MyTextFormFeild(
-                          title: 'Start typing city - e.g New Delhi',
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.clear),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      children: [
-                        const Text(StringManager.pickUp),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        MyTextFormFeild(
-                          title: 'pickUp date',
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.calendar_today_rounded),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      children: [
-                        const Text(StringManager.pickUpAt),
-                        MyTextFormFeild(
-                          title: '',
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.punch_clock),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    MyButton(
-                      title: StringManager.selectCar,
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),

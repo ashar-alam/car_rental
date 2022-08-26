@@ -3,6 +3,7 @@
 
 class StringManager {
 // homeScreen
+  static const String outStationCabs = 'Outstation Cabs';
   static const String indiasPremierIntercityCabs =
       'INDIA\'S PREMIER INTERCITY CABS';
   static const String from = 'FROM';
@@ -11,16 +12,20 @@ class StringManager {
   static const String pickUpAt = 'PICK UP AT';
   static const String selectCar = 'Select Car';
   static const String outStation = 'Outstation';
+  // Local 
   static const String local = 'Local';
+  static const String localHourlyRentals ='Local Hourly Rentals';
+  static const String city = 'CITY';
   static const String airport = 'Airport';
   static const String oneWay = 'One Way';
   static const String roundTrip = 'Round Trip';
   // Airport
+  static const String airportCabs = 'Airport Cabs';
   static const String relibleAirportPickUpDrops =
       'RELIBLE AIRPORT PICKUPS & DROPS';
   static const String fromAirport = 'From Airport';
   static const String toAirport = 'To Airport';
-  static const String city = 'CITY';
+  static const String enterYourAddress = 'Enter your address';
   static const String dropAddress = 'DROP ADDRESS';
   // Account Screen
   static const String account = 'Account';
