@@ -1,11 +1,11 @@
 import 'package:car_rental/screens/paymentDetials.dart';
+import 'package:car_rental/utils/AppStyle.dart';
 import 'package:car_rental/utils/StringManager.dart';
 import 'package:car_rental/widgets/text.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/utils.dart';
+import '../utils/Utils.dart';
 import '../widgets/AppBarView.dart';
-import '../widgets/iconButton.dart';
 import '../widgets/textFormFeild.dart';
 
 class MyContactAndPickup extends StatefulWidget {
@@ -23,24 +23,7 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
       appBar: AppBarView().appBar(
         context,
         title: StringManager.contactPickup,
-        actions: [
-          GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, Routes.profile);
-            },
-            child: Container(
-              padding: EdgeInsets.all(Utils.getWidth(context) / 90.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 1.5,
-                ),
-              ),
-              child: const MyIconButton(),
-            ),
-          ),
-        ],
+        actions: [],
       ),
       body: Container(
         padding: EdgeInsets.all(Utils.getWidth(context) / 30.0),
@@ -149,6 +132,7 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  primary: AppStyle.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   minimumSize: Size(
@@ -175,109 +159,111 @@ class _MyContactAndPickupState extends State<MyContactAndPickup> {
                 width: Utils.getWidth(context) / 1,
                 // height: Utils.getHeight(context) / 1.5,
                 child: Card(
-                  elevation: 7,
-                  child: ExpansionTile(
-                    title: const Text(
-                      StringManager.bookingDetials,
-                      style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  elevation: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ExpansionTile(
+                      title: const Text(
+                        StringManager.bookingDetials,
+                        style: TextStyle(fontSize: 20.0, color: AppStyle.black),
+                      ),
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.pickupCity,
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.w500),
+                            ),
+                            MyText(
+                              title: "Jabalpur,Madhya Pardesh",
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.tripType,
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            MyText(
+                              title: "Local 8 hrs|80kms",
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.pickupDateTime,
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            MyText(
+                              title: "24-08-2022|01:00 PM",
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.careType,
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            MyText(
+                              title: "Toyota Ertios or Equivalant",
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              StringManager.totalFare,
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                            MyText(
+                              title: "1995",
+                              style: const TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.pickupCity,
-                            style: TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                          MyText(
-                            title: "Jabalpur,Madhya Pardesh",
-                            style: const TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.tripType,
-                            style: TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                          MyText(
-                            title: "Local 8 hrs|80kms",
-                            style: const TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.pickupDateTime,
-                            style: TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                          MyText(
-                            title: "24-08-2022|01:00 PM",
-                            style: const TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.careType,
-                            style: TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                          MyText(
-                            title: "Toyota Ertios or Equivalant",
-                            style: const TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            StringManager.totalFare,
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                          MyText(
-                            title: "1995",
-                            style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
                   ),
                 ),
               ),

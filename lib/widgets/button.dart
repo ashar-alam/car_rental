@@ -2,7 +2,7 @@ import 'package:car_rental/screens/outstation.dart/oneWay.dart';
 import 'package:car_rental/utils/AppStyle.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/utils.dart';
+import '../utils/Utils.dart';
 
 class MyButton extends StatelessWidget {
   String title;
@@ -12,7 +12,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: AppStyle.lightBlue,
+        primary: AppStyle.primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         minimumSize: Size(
           Utils.getWidth(context) / 1.1,

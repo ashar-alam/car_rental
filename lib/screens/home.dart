@@ -1,12 +1,10 @@
 import 'package:car_rental/utils/AppStyle.dart';
 import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/button.dart';
-import 'package:car_rental/widgets/headText.dart';
-import 'package:car_rental/widgets/iconButton.dart';
+import 'package:car_rental/widgets/Button.dart';
+import 'package:car_rental/widgets/HeadText.dart';
 import 'package:car_rental/widgets/toggleButton.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/utils.dart';
 import '../widgets/AppBarView.dart';
 import '../widgets/textFormFeild.dart';
 
@@ -21,30 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    // print(add(5, 29));
-    // print('${add(6, 7)}hello ');
     return Scaffold(
       appBar: AppBarView().appBar(
         context,
         title: StringManager.outStationCabs,
-        actions: [
-          GestureDetector(
-            onTap: () {},
-            child: Container(
-              padding: EdgeInsets.all(
-                Utils.getWidth(context) / 80.0,
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 1.5,
-                ),
-              ),
-              child: const MyIconButton(),
-            ),
-          ),
-        ],
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -54,12 +33,16 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MyText(
                     title: StringManager.indiasPremierIntercityCabs,
                     style: const TextStyle(
-                        color: AppStyle.lightBlue, fontWeight: FontWeight.w600),
+                        color: AppStyle.primaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(
+                    height: 10,
                   ),
                   MyToggleButton(
                     title: StringManager.oneWay,
@@ -76,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Text(
                               StringManager.from,
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
+                                  fontSize: 15, fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(
                               width: 10,
@@ -97,13 +80,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             )
                           ],
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: [
                             const Text(
                               StringManager.to,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 15,
                               ),
                             ),
                             const SizedBox(
@@ -121,13 +107,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             )
                           ],
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: [
                             const Text(
                               StringManager.pickUp,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 15,
                               ),
                             ),
                             const SizedBox(
@@ -141,9 +130,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.calendar_month),
+                              icon: const Icon(Icons.calendar_month_outlined),
                             )
                           ],
+                        ),
+                        const SizedBox(
+                          height: 10,
                         ),
                         Row(
                           children: [
@@ -151,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               StringManager.pickUpAt,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 15,
                               ),
                             ),
                             const SizedBox(
@@ -170,6 +162,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )
                           ],
+                        ),
+                        const SizedBox(
+                          height: 20,
                         ),
                         MyButton(
                           title: StringManager.selectCar,

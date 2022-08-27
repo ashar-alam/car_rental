@@ -1,4 +1,4 @@
-import 'package:car_rental/screens/bottomscreens/Dashbord.dart';
+import 'package:car_rental/screens/bottomscreens/dashboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

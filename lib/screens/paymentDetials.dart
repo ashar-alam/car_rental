@@ -1,11 +1,10 @@
 import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/widgets/headText.dart';
+import 'package:car_rental/widgets/HeadText.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/StringManager.dart';
-import '../utils/utils.dart';
+import '../utils/Utils.dart';
 import '../widgets/AppBarView.dart';
-import '../widgets/iconButton.dart';
 
 class MyPaymentDetials extends StatefulWidget {
   const MyPaymentDetials({Key? key}) : super(key: key);
@@ -22,24 +21,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
       appBar: AppBarView().appBar(
         context,
         title: StringManager.paymentDetials,
-        actions: [
-          GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, Routes.profile);
-            },
-            child: Container(
-              padding: EdgeInsets.all(Utils.getWidth(context) / 90.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 1.5,
-                ),
-              ),
-              child: const MyIconButton(),
-            ),
-          ),
-        ],
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -64,6 +46,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                                 _value = value!;
                               });
                             },
+                            fillColor: MaterialStateColor.resolveWith(
+                                (states) => AppStyle.primaryColor),
                           ),
                           const Text(StringManager.payDuringTheTrip),
                         ],
@@ -78,6 +62,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                                 _value = value!;
                               });
                             },
+                            fillColor: MaterialStateColor.resolveWith(
+                                (states) => AppStyle.primaryColor),
                           ),
                           const Text(StringManager.pay500Now),
                         ],
@@ -92,6 +78,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                                 _value = value!;
                               });
                             },
+                            fillColor: MaterialStateColor.resolveWith(
+                                (states) => AppStyle.primaryColor),
                           ),
                           const Text(StringManager.pay1000Now),
                         ],
@@ -113,13 +101,15 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
             //   height: 10,
             // ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
                   const Expanded(
                     child: TextField(
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: AppStyle.primaryColor),
                               borderRadius: BorderRadius.zero),
                           labelText: StringManager.enterCouponCode),
                     ),
@@ -131,7 +121,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                         ),
                         primary: AppStyle.grey,
                         minimumSize: Size(Utils.getWidth(context) / 3,
-                            Utils.getHeight(context) / 11.8)),
+                            Utils.getHeight(context) / 13.5)),
                     onPressed: () {},
                     child: const Text(StringManager.apply),
                   ),
@@ -140,7 +130,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: AppStyle.lightBlue,
+                primary: AppStyle.primaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -170,7 +160,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                   child: ExpansionTile(
                     title: const Text(
                       StringManager.bookingDetials,
-                      style: TextStyle(fontSize: 20.0, color: Colors.black),
+                      style: TextStyle(fontSize: 20.0, color: AppStyle.black),
                     ),
                     children: <Widget>[
                       Row(
@@ -179,19 +169,19 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           const Text(
                             StringManager.pickupCity,
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                           MyText(
                             title: "Jabalpur,Madhya Pardesh",
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -199,19 +189,19 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           const Text(
                             StringManager.tripType,
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                           MyText(
                             title: "Local 8 hrs|80kms",
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -219,19 +209,19 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           const Text(
                             StringManager.pickupDateTime,
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                           MyText(
                             title: "24-08-2022|01:00 PM",
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -239,19 +229,19 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           const Text(
                             StringManager.careType,
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                           MyText(
                             title: "Toyota Ertios or Equivalant",
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -263,7 +253,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           MyText(
                             title: "Rs 1995",
                             style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),

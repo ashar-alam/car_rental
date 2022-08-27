@@ -1,12 +1,11 @@
 import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/button.dart';
-import 'package:car_rental/widgets/headText.dart';
-import 'package:car_rental/widgets/iconButton.dart';
+import 'package:car_rental/widgets/Button.dart';
+import 'package:car_rental/widgets/HeadText.dart';
 import 'package:car_rental/widgets/toggleButton.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/AppStyle.dart';
-import '../../utils/utils.dart';
+import '../../utils/Utils.dart';
 import '../../widgets/AppBarView.dart';
 import '../../widgets/textFormFeild.dart';
 
@@ -24,24 +23,7 @@ class _AirportState extends State<Airport> {
       appBar: AppBarView().appBar(
         context,
         title: StringManager.airportCabs,
-        actions: [
-          GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, Routes.profile);
-            },
-            child: Container(
-              padding: EdgeInsets.all(Utils.getWidth(context) / 80.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.white,
-                  width: 1.5,
-                ),
-              ),
-              child: const MyIconButton(),
-            ),
-          ),
-        ],
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -55,7 +37,8 @@ class _AirportState extends State<Airport> {
                   MyText(
                     title: StringManager.relibleAirportPickUpDrops,
                     style: const TextStyle(
-                        color: AppStyle.lightBlue, fontWeight: FontWeight.w600),
+                        color: AppStyle.primaryColor,
+                        fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
                     height: 15,
@@ -74,7 +57,7 @@ class _AirportState extends State<Airport> {
                           const Text(
                             StringManager.city,
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(
                             width: 10,
@@ -103,7 +86,7 @@ class _AirportState extends State<Airport> {
                           const Text(
                             StringManager.dropAddress,
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(
                             width: 10,
@@ -131,7 +114,7 @@ class _AirportState extends State<Airport> {
                           const Text(
                             StringManager.pickUp,
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(
                             width: 10,
@@ -153,7 +136,7 @@ class _AirportState extends State<Airport> {
                           const Text(
                             StringManager.pickUpAt,
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(
                             width: 10,

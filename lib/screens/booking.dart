@@ -33,15 +33,15 @@ class _MyBookingState extends State<MyBooking>
         padding: const EdgeInsets.all(8.0),
         child: Container(
           decoration: BoxDecoration(
-              border: Border.all(width: 1, color: Colors.grey),
+              border: Border.all(width: 1, color: AppStyle.grey),
               borderRadius: BorderRadius.circular(10.0)),
           child: TabBar(
             indicator: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), // Creates border
-                color: AppStyle.lightBlue),
-            unselectedLabelColor: Colors.black,
-            labelColor: Colors.white,
-            labelStyle: const TextStyle(color: Colors.white),
+                color: AppStyle.primaryColor),
+            unselectedLabelColor: AppStyle.black,
+            labelColor: AppStyle.white,
+            labelStyle: const TextStyle(color: AppStyle.white),
             tabs: const [
               Tab(
                 text: StringManager.upconing,

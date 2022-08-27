@@ -1,12 +1,10 @@
-// ignore: file_names
-import 'package:car_rental/widgets/button.dart';
-import 'package:car_rental/widgets/iconButton.dart';
+import 'package:car_rental/widgets/Button.dart';
 import 'package:car_rental/widgets/toggleButton.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/AppStyle.dart';
 import '../../utils/StringManager.dart';
-import '../../utils/utils.dart';
+import '../../utils/Utils.dart';
 import '../../widgets/AppBarView.dart';
 
 class Local extends StatefulWidget {
@@ -21,29 +19,12 @@ class _LocalState extends State<Local> {
   DateTime? pickUpDate;
   @override
   Widget build(BuildContext context) {
-    List<bool> selections = List.generate(2, (bool) => false);
+    // List<bool> selections = List.generate(2, (bool) => false);
     return Scaffold(
       appBar: AppBarView().appBar(
         context,
         title: StringManager.localHourlyRentals,
-        actions: [
-          GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, Routes.profile);
-            },
-            child: Container(
-              padding: EdgeInsets.all(Utils.getWidth(context) / 80.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.white,
-                  width: 1.5,
-                ),
-              ),
-              child: const MyIconButton(),
-            ),
-          ),
-        ],
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -57,7 +38,8 @@ class _LocalState extends State<Local> {
                   const Text(
                     StringManager.indiasPremierIntercityCabs,
                     style: TextStyle(
-                        color: AppStyle.lightBlue, fontWeight: FontWeight.w600),
+                        color: AppStyle.primaryColor,
+                        fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 10),
                   MyToggleButton(
@@ -168,7 +150,7 @@ class _LocalState extends State<Local> {
                             ),
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.calendar_month),
+                              icon: const Icon(Icons.calendar_month_outlined),
                             )
                           ],
                         ),

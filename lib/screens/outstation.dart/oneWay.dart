@@ -1,11 +1,11 @@
 import 'package:car_rental/screens/contactPickUp.dart';
+import 'package:car_rental/utils/AppStyle.dart';
 import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/headText.dart';
+import 'package:car_rental/widgets/HeadText.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/assetsManager.dart';
-import '../../utils/utils.dart';
-import '../../widgets/iconButton.dart';
+import '../../utils/AssetsManager.dart';
+import '../../utils/Utils.dart';
 
 class OneWay extends StatefulWidget {
   const OneWay({Key? key}) : super(key: key);
@@ -29,18 +29,21 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.min,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   BackButton(),
+                  SizedBox(
+                    width: 80,
+                  ),
                   Text(
                     StringManager.jaipurTonk,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                    style:
+                        TextStyle(fontSize: 15, color: AppStyle.primaryColor),
                   ),
-                  MyIconButton(),
                 ],
               ),
               const Text(
@@ -53,26 +56,26 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
               const Text(
                 StringManager.modifingBooking,
                 style: TextStyle(
-                    color: Colors.blue,
+                    color: AppStyle.primaryColor,
                     fontSize: 15,
                     fontWeight: FontWeight.w500),
               ),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyText(
                     title: StringManager.sedan,
-                    style: const TextStyle(color: Colors.blue),
+                    style: const TextStyle(color: AppStyle.primaryColor),
                   ),
                   const SizedBox(
                     width: 30,
                   ),
                   MyText(
                     title: StringManager.ertiga,
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(color: AppStyle.black),
                   ),
                 ],
               ),
@@ -87,7 +90,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: const Color.fromARGB(255, 110, 201, 246),
+                        color: AppStyle.primaryLight,
                         width: 2,
                       ),
                     ),
@@ -104,7 +107,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: Colors.grey,
+                        color: AppStyle.grey,
                         width: 2,
                       ),
                     ),
@@ -123,23 +126,21 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                 children: [
                   MyText(
                     title: StringManager.rent,
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 90, 225, 245),
-                    ),
+                    style: const TextStyle(color: AppStyle.primaryColor),
                   ),
                   const SizedBox(
                     width: 50,
                   ),
                   MyText(
                     title: StringManager.rent,
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(color: AppStyle.black),
                   ),
                 ],
               ),
               Card(
                 elevation: 5,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -148,12 +149,12 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                         children: [
                           Flexible(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 MyText(
                                   title: StringManager.carName,
                                   style: const TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                      color: AppStyle.black, fontSize: 18),
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -161,8 +162,8 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                 const Text(
                                   "2000",
                                   style: TextStyle(
-                                      fontSize: 30,
-                                      color: Color.fromARGB(255, 100, 211, 248),
+                                      fontSize: 25,
+                                      color: AppStyle.primaryColor,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 const SizedBox(
@@ -171,93 +172,92 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                 const Text(
                                   "2299",
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.red),
+                                      fontSize: 20, color: AppStyle.red),
                                 ),
                                 const SizedBox(
                                   height: 15,
-                                ),
-                                MyText(
-                                  title: StringManager.timeKm,
-                                  style: const TextStyle(
-                                      color: Colors.black, fontSize: 12),
                                 ),
                               ],
                             ),
                           ),
                           Flexible(
                             flex: 2,
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  AssetsManager.toyota,
-                                  height: Utils.getHeight(context) / 6,
-                                  width: Utils.getWidth(context) / 2,
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(4.0),
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            width: 1, color: Colors.grey),
-                                      ),
-                                      child: const Icon(
-                                          Icons.airline_seat_legroom_extra,
-                                          size: 12,
-                                          color: Colors.grey),
-                                    ),
-                                    MyText(
-                                      title: "4 Seater",
-                                      style: const TextStyle(
-                                          color: Colors.black, fontSize: 12),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(4.0),
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            width: 1, color: Colors.grey),
-                                      ),
-                                      child: const Icon(Icons.luggage,
-                                          size: 12, color: Colors.grey),
-                                    ),
-                                    MyText(
-                                      title: "2 bags",
-                                      style: const TextStyle(
-                                          color: Colors.black, fontSize: 12),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(4.0),
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            width: 1, color: Colors.grey),
-                                      ),
-                                      child: const Icon(Icons.ac_unit,
-                                          size: 12, color: Colors.grey),
-                                    ),
-                                    MyText(
-                                      title: " AC",
-                                      style: const TextStyle(
-                                          color: Colors.black, fontSize: 12),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            child: Image.asset(
+                              AssetsManager.toyota,
+                              height: Utils.getHeight(context) / 6,
+                              width: Utils.getWidth(context) / 2,
                             ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          MyText(
+                            title: StringManager.timeKm,
+                            style: const TextStyle(
+                                color: AppStyle.black, fontSize: 12),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(4.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border:
+                                  Border.all(width: 1, color: AppStyle.grey),
+                            ),
+                            child: const Icon(Icons.airline_seat_legroom_extra,
+                                size: 16, color: AppStyle.grey),
+                          ),
+                          MyText(
+                            title: "4 Seater",
+                            style: const TextStyle(
+                                color: AppStyle.black, fontSize: 15),
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(4.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border:
+                                  Border.all(width: 1, color: AppStyle.grey),
+                            ),
+                            child: const Icon(Icons.luggage,
+                                size: 16, color: AppStyle.grey),
+                          ),
+                          MyText(
+                            title: "2 bags",
+                            style: const TextStyle(
+                                color: AppStyle.black, fontSize: 15),
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(4.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border:
+                                  Border.all(width: 1, color: AppStyle.grey),
+                            ),
+                            child: const Icon(Icons.ac_unit,
+                                size: 16, color: AppStyle.grey),
+                          ),
+                          MyText(
+                            title: " AC",
+                            style: const TextStyle(
+                                color: AppStyle.black, fontSize: 15),
                           ),
                         ],
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      // MyButton(title: StringManager.selectCar),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          primary: AppStyle.primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -290,14 +290,19 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                     style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.w500,
-                        color: Colors.black),
+                        color: AppStyle.black),
                   ),
                   children: [
                     Column(
                       children: [
                         TabBar(
-                          unselectedLabelColor: Colors.black,
-                          labelColor: Colors.blue,
+                          indicator: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(10), // Creates border
+                              color: AppStyle.primaryColor),
+                          unselectedLabelColor: AppStyle.black,
+                          labelColor: AppStyle.white,
+                          labelStyle: const TextStyle(color: AppStyle.white),
                           tabs: [
                             Container(
                               decoration: BoxDecoration(
@@ -333,15 +338,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.local_gas_station,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -350,7 +353,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: StringManager.fuelChange,
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -362,15 +365,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.sports_motorsports,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -379,7 +380,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: StringManager.driverAllowance,
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -391,15 +392,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.receipt,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -408,7 +407,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: StringManager.gst,
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -429,15 +428,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.payments_sharp,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -446,7 +443,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: "Pay 13/km after 80kms",
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -458,15 +455,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.payments_sharp,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -475,7 +470,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: "Pay 144/hrafter 8 hours",
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -487,15 +482,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 169, 212, 247),
+                                              color: AppStyle.primaryLight,
                                             ),
                                           ),
                                           child: const Icon(
                                             Icons.car_crash,
                                             size: 15,
-                                            color: Color.fromARGB(
-                                                255, 169, 212, 247),
+                                            color: AppStyle.primaryLight,
                                           ),
                                         ),
                                         const SizedBox(
@@ -504,7 +497,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: StringManager.tollTax,
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -515,17 +508,13 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             border: Border.all(
-                                              width: 1,
-                                              color: const Color.fromARGB(
-                                                  255, 150, 200, 242),
-                                            ),
+                                                width: 1,
+                                                color: AppStyle.primaryLight),
                                           ),
                                           child: const Icon(
-                                            Icons.dark_mode_sharp,
-                                            size: 15,
-                                            color: Color.fromARGB(
-                                                255, 150, 200, 242),
-                                          ),
+                                              Icons.dark_mode_sharp,
+                                              size: 15,
+                                              color: AppStyle.primaryLight),
                                         ),
                                         const SizedBox(
                                           width: 10,
@@ -533,7 +522,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         MyText(
                                           title: StringManager.nightAllowance,
                                           style: const TextStyle(
-                                              color: Colors.black),
+                                              color: AppStyle.black),
                                         ),
                                       ],
                                     ),
