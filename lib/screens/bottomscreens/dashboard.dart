@@ -1,9 +1,10 @@
 import 'package:car_rental/screens/account.dart';
 import 'package:car_rental/screens/booking.dart';
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/utils/StringManager.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/string_manager.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/appbar_view.dart';
 import '../home.dart';
 import 'airport.dart';
 import 'local.dart';
@@ -35,7 +36,19 @@ class _DashboardState extends State<Dashboard> {
       MyBooking(),
       MyAccount()
     ];
+    List<String> appBarTitles = [
+      StringManager.outStationCabs,
+      StringManager.airportCabs,
+      StringManager.localHourlyRentals,
+      StringManager.booking,
+      StringManager.account,
+    ];
     return Scaffold(
+      appBar: AppBarView().appBar(
+        context,
+        title: appBarTitles[currentIndex],
+        actions: [],
+      ),
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
@@ -179,6 +192,7 @@ class _DashboardState extends State<Dashboard> {
           )
         ],
       ),
+      drawer: const Drawer(),
     );
   }
 }

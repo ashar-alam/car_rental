@@ -1,11 +1,10 @@
-import 'package:car_rental/widgets/Button.dart';
-import 'package:car_rental/widgets/toggleButton.dart';
+import 'package:car_rental/widgets/button.dart';
+import 'package:car_rental/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/AppStyle.dart';
-import '../../utils/StringManager.dart';
+import '../../utils/app_style.dart';
+import '../../utils/string_manager.dart';
 import '../../utils/Utils.dart';
-import '../../widgets/AppBarView.dart';
 
 class Local extends StatefulWidget {
   const Local({Key? key}) : super(key: key);
@@ -21,11 +20,11 @@ class _LocalState extends State<Local> {
   Widget build(BuildContext context) {
     // List<bool> selections = List.generate(2, (bool) => false);
     return Scaffold(
-      appBar: AppBarView().appBar(
-        context,
-        title: StringManager.localHourlyRentals,
-        actions: [],
-      ),
+      // appBar: AppBarView().appBar(
+      //   context,
+      //   title: StringManager.localHourlyRentals,
+      //   actions: [],
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),

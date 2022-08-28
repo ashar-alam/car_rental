@@ -1,10 +1,10 @@
 import 'package:car_rental/screens/contactPickUp.dart';
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/HeadText.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/string_manager.dart';
+import 'package:car_rental/widgets/head_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/AssetsManager.dart';
+import '../../utils/assets_manager.dart';
 import '../../utils/Utils.dart';
 
 class OneWay extends StatefulWidget {

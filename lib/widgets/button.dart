@@ -1,12 +1,12 @@
-import 'package:car_rental/screens/outstation.dart/oneWay.dart';
-import 'package:car_rental/utils/AppStyle.dart';
+import 'package:car_rental/screens/outstation/oneWay.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/Utils.dart';
+import '../utils/app_style.dart';
 
 class MyButton extends StatelessWidget {
-  String title;
-  MyButton({Key? key, required this.title}) : super(key: key);
+  final String title;
+  const MyButton({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

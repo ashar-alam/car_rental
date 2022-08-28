@@ -1,13 +1,12 @@
-import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/Button.dart';
-import 'package:car_rental/widgets/HeadText.dart';
-import 'package:car_rental/widgets/toggleButton.dart';
+import 'package:car_rental/utils/string_manager.dart';
+import 'package:car_rental/widgets/button.dart';
+import 'package:car_rental/widgets/head_text.dart';
+import 'package:car_rental/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/AppStyle.dart';
+import '../../utils/app_style.dart';
 import '../../utils/Utils.dart';
-import '../../widgets/AppBarView.dart';
-import '../../widgets/textFormFeild.dart';
+import '../../widgets/text_form_feild.dart';
 
 class Airport extends StatefulWidget {
   const Airport({Key? key}) : super(key: key);
@@ -20,11 +19,11 @@ class _AirportState extends State<Airport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView().appBar(
-        context,
-        title: StringManager.airportCabs,
-        actions: [],
-      ),
+      // appBar: AppBarView().appBar(
+      //   context,
+      //   title: StringManager.airportCabs,
+      //   actions: [],
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -34,9 +33,9 @@ class _AirportState extends State<Airport> {
               padding: EdgeInsets.all(Utils.getWidth(context) / 20),
               child: Column(
                 children: [
-                  MyText(
+                  const MyText(
                     title: StringManager.relibleAirportPickUpDrops,
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: AppStyle.primaryColor,
                         fontWeight: FontWeight.w600),
                   ),

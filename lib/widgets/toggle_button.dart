@@ -1,4 +1,4 @@
-import 'package:car_rental/utils/AppStyle.dart';
+import 'package:car_rental/utils/app_style.dart';
 import 'package:flutter/material.dart';
 
 class MyToggleButton extends StatefulWidget {

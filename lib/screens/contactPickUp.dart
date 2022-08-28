@@ -1,12 +1,12 @@
-import 'package:car_rental/screens/paymentDetials.dart';
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/utils/StringManager.dart';
+import 'package:car_rental/screens/payment_detials.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/string_manager.dart';
 import 'package:car_rental/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/Utils.dart';
-import '../widgets/AppBarView.dart';
-import '../widgets/textFormFeild.dart';
+import '../widgets/appbar_view.dart';
+import '../widgets/text_form_feild.dart';
 
 class MyContactAndPickup extends StatefulWidget {
   const MyContactAndPickup({Key? key}) : super(key: key);

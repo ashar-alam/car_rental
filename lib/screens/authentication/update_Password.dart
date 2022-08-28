@@ -1,9 +1,9 @@
 import 'package:car_rental/utils/Utils.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/AppStyle.dart';
-import '../../utils/StringManager.dart';
-import '../../widgets/AppBarView.dart';
+import '../../utils/app_style.dart';
+import '../../utils/string_manager.dart';
+import '../../widgets/appbar_view.dart';
 
 class MyUpdatePassword extends StatefulWidget {
   const MyUpdatePassword({Key? key}) : super(key: key);

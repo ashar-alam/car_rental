@@ -1,7 +1,5 @@
 import 'package:car_rental/screens/bottomscreens/dashboard.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../screens/home.dart';
 import 'Routes.dart';
 

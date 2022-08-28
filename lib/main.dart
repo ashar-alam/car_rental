@@ -1,5 +1,5 @@
 import 'package:car_rental/utils/Routes.dart';
-import 'package:car_rental/utils/RoutesManager.dart';
+import 'package:car_rental/utils/routes_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

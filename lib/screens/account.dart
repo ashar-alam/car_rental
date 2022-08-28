@@ -1,12 +1,12 @@
 import 'package:car_rental/screens/authentication/update_Password.dart';
 import 'package:car_rental/screens/booking.dart';
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/utils/StringManager.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/string_manager.dart';
 import 'package:car_rental/utils/Utils.dart';
-import 'package:car_rental/widgets/Button.dart';
+import 'package:car_rental/widgets/button.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/AppBarView.dart';
+import '../widgets/appbar_view.dart';
 
 class MyAccount extends StatefulWidget {
   const MyAccount({Key? key}) : super(key: key);
@@ -19,11 +19,11 @@ class _MyAccountState extends State<MyAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView().appBar(
-        context,
-        title: StringManager.account,
-        actions: [],
-      ),
+      // appBar: AppBarView().appBar(
+      //   context,
+      //   title: StringManager.account,
+      //   actions: [],
+      // ),
       bottomNavigationBar: const BottomAppBar(
         color: AppStyle.primaryColor,
         child: Padding(

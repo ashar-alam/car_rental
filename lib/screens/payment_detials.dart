@@ -1,10 +1,10 @@
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/widgets/HeadText.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/widgets/head_text.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/StringManager.dart';
 import '../utils/Utils.dart';
-import '../widgets/AppBarView.dart';
+import '../utils/string_manager.dart';
+import '../widgets/appbar_view.dart';
 
 class MyPaymentDetials extends StatefulWidget {
   const MyPaymentDetials({Key? key}) : super(key: key);
@@ -92,9 +92,9 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
             Container(
               padding: const EdgeInsets.all(10.0),
               width: Utils.getWidth(context),
-              child: MyText(
+              child: const MyText(
                 title: StringManager.gotCoupon,
-                style: const TextStyle(fontSize: 15),
+                style: TextStyle(fontSize: 15),
               ),
             ),
             // const SizedBox(
@@ -107,6 +107,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                   const Expanded(
                     child: TextField(
                       decoration: InputDecoration(
+                          isDense: true,
                           border: OutlineInputBorder(
                               borderSide:
                                   BorderSide(color: AppStyle.primaryColor),
@@ -120,8 +121,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           borderRadius: BorderRadius.circular(0),
                         ),
                         primary: AppStyle.grey,
-                        minimumSize: Size(Utils.getWidth(context) / 3,
-                            Utils.getHeight(context) / 13.5)),
+                        minimumSize: Size(Utils.getWidth(context) / 3, 50)),
                     onPressed: () {},
                     child: const Text(StringManager.apply),
                   ),
@@ -165,8 +165,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                     children: <Widget>[
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             StringManager.pickupCity,
                             style: TextStyle(
                               fontSize: 14,
@@ -174,7 +174,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           ),
                           MyText(
                             title: "Jabalpur,Madhya Pardesh",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                             ),
                           ),
@@ -185,8 +185,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             StringManager.tripType,
                             style: TextStyle(
                               fontSize: 14,
@@ -194,7 +194,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           ),
                           MyText(
                             title: "Local 8 hrs|80kms",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                             ),
                           ),
@@ -205,8 +205,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             StringManager.pickupDateTime,
                             style: TextStyle(
                               fontSize: 14,
@@ -214,7 +214,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           ),
                           MyText(
                             title: "24-08-2022|01:00 PM",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                             ),
                           ),
@@ -225,8 +225,8 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             StringManager.careType,
                             style: TextStyle(
                               fontSize: 14,
@@ -234,7 +234,7 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                           ),
                           MyText(
                             title: "Toyota Ertios or Equivalant",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                             ),
                           ),
@@ -245,14 +245,14 @@ class _MyPaymentDetialsState extends State<MyPaymentDetials> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             StringManager.totalFare,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           MyText(
                             title: "Rs 1995",
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],

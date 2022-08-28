@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 
-import '../utils/AppStyle.dart';
+import '../utils/app_style.dart';
 
 class AppBarView {
   PreferredSizeWidget? appBar(BuildContext context,

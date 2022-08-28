@@ -1,8 +1,8 @@
-import 'package:car_rental/utils/AppStyle.dart';
+import 'package:car_rental/utils/app_style.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/StringManager.dart';
-import '../widgets/AppBarView.dart';
+import '../utils/string_manager.dart';
+import '../widgets/appbar_view.dart';
 
 class MyBooking extends StatefulWidget {
   const MyBooking({Key? key}) : super(key: key);
@@ -24,11 +24,11 @@ class _MyBookingState extends State<MyBooking>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView().appBar(
-        context,
-        title: StringManager.booking,
-        actions: [],
-      ),
+      // appBar: AppBarView().appBar(
+      //   context,
+      //   title: StringManager.booking,
+      //   actions: [],
+      // ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(

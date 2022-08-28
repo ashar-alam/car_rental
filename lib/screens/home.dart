@@ -1,12 +1,11 @@
-import 'package:car_rental/utils/AppStyle.dart';
-import 'package:car_rental/utils/StringManager.dart';
-import 'package:car_rental/widgets/Button.dart';
-import 'package:car_rental/widgets/HeadText.dart';
-import 'package:car_rental/widgets/toggleButton.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/string_manager.dart';
+import 'package:car_rental/widgets/button.dart';
+import 'package:car_rental/widgets/head_text.dart';
+import 'package:car_rental/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/AppBarView.dart';
-import '../widgets/textFormFeild.dart';
+import '../widgets/text_form_feild.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,11 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView().appBar(
-        context,
-        title: StringManager.outStationCabs,
-        actions: [],
-      ),
+      // appBar: AppBarView().appBar(
+      //   context,
+      //   title: StringManager.outStationCabs,
+      //   actions: [],
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -35,9 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  MyText(
+                  const MyText(
                     title: StringManager.indiasPremierIntercityCabs,
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: AppStyle.primaryColor,
                         fontWeight: FontWeight.w600),
                   ),
