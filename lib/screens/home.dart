@@ -1,7 +1,7 @@
 import 'package:car_rental/utils/app_style.dart';
 import 'package:car_rental/utils/string_manager.dart';
-import 'package:car_rental/widgets/button.dart';
 import 'package:car_rental/widgets/head_text.dart';
+import 'package:car_rental/widgets/my_button.dart';
 import 'package:car_rental/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  MyToggleButton(
+                  const MyToggleButton(
                     title: StringManager.oneWay,
                     title1: StringManager.roundTrip,
                   ),
@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(
                           height: 20,
                         ),
-                        MyButton(
+                        const MyButton(
                           title: StringManager.selectCar,
                         )
                       ],

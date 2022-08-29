@@ -1,5 +1,9 @@
 import 'package:car_rental/screens/account.dart';
+import 'package:car_rental/screens/authentication/login.dart';
 import 'package:car_rental/screens/booking.dart';
+import 'package:car_rental/screens/drawer/privacy_policy.dart';
+import 'package:car_rental/screens/drawer/refund_policy.dart';
+import 'package:car_rental/screens/drawer/term_condition.dart';
 import 'package:car_rental/utils/app_style.dart';
 import 'package:car_rental/utils/string_manager.dart';
 import 'package:flutter/material.dart';
@@ -192,7 +196,170 @@ class _DashboardState extends State<Dashboard> {
           )
         ],
       ),
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            SizedBox(
+              height: 250,
+              child: DrawerHeader(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [AppStyle.primaryLight, AppStyle.primaryDark],
+                      begin: FractionalOffset(0.0, 0.0),
+                      end: FractionalOffset(0.5, 0.0),
+                      stops: [0.0, 1.0],
+                      tileMode: TileMode.clamp),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Text(
+                      StringManager.seeYouSoon,
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: AppStyle.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const Text(
+                      StringManager.wlecomeToSeeYouSoon,
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: AppStyle.white,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        minimumSize: const Size(250.0, 40.0),
+                        primary: AppStyle.white,
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const MyLogin()),
+                        );
+                      },
+                      child: const Text(
+                        StringManager.login,
+                        style: TextStyle(color: AppStyle.black),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        StringManager.createAccount,
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: AppStyle.white,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.security),
+              title: const Text(
+                StringManager.privacyAndPolicy,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyPrivacyPolicy(),
+                  ),
+                );
+              },
+            ),
+            const Divider(),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.library_books),
+              title: const Text(
+                StringManager.termAndCondition,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyTermCondition(),
+                  ),
+                );
+              },
+            ),
+            const Divider(),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.policy),
+              title: const Text(
+                StringManager.refundpolicy,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyRefundPolicy(),
+                  ),
+                );
+              },
+            ),
+            const Divider(),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.supervised_user_circle),
+              title: const Text(
+                StringManager.aboutUs,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyRefundPolicy(),
+                  ),
+                );
+              },
+            ),
+            const Divider(),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.whatsapp),
+              title: const Text(
+                StringManager.whatsapp,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyRefundPolicy(),
+                  ),
+                );
+              },
+            ),
+            const Divider(),
+            ListTile(
+              trailing: const Icon(Icons.chevron_right),
+              leading: const Icon(Icons.contact_support),
+              title: const Text(
+                StringManager.contactUs,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyRefundPolicy(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

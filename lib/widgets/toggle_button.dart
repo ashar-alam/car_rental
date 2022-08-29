@@ -2,8 +2,8 @@ import 'package:car_rental/utils/app_style.dart';
 import 'package:flutter/material.dart';
 
 class MyToggleButton extends StatefulWidget {
-  String title, title1;
-  MyToggleButton({Key? key, required this.title, required this.title1})
+  final String title, title1;
+  const MyToggleButton({Key? key, required this.title, required this.title1})
       : super(key: key);
 
   @override
@@ -18,7 +18,6 @@ class _MyToggleButtonState extends State<MyToggleButton> {
     return ToggleButtons(
         borderRadius: BorderRadius.circular(10),
         fillColor: AppStyle.primaryColor,
-        
         isSelected: selections,
         onPressed: (index) {
           setState(() {

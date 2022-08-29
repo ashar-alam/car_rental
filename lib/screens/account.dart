@@ -1,12 +1,9 @@
-import 'package:car_rental/screens/authentication/update_Password.dart';
-import 'package:car_rental/screens/booking.dart';
+import 'package:car_rental/screens/authentication/update_password.dart';
 import 'package:car_rental/utils/app_style.dart';
 import 'package:car_rental/utils/string_manager.dart';
-import 'package:car_rental/utils/Utils.dart';
-import 'package:car_rental/widgets/button.dart';
+import 'package:car_rental/utils/utils.dart';
+import 'package:car_rental/widgets/my_button.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/appbar_view.dart';
 
 class MyAccount extends StatefulWidget {
   const MyAccount({Key? key}) : super(key: key);
@@ -24,15 +21,15 @@ class _MyAccountState extends State<MyAccount> {
       //   title: StringManager.account,
       //   actions: [],
       // ),
-      bottomNavigationBar: const BottomAppBar(
-        color: AppStyle.primaryColor,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text(
-            "For any feedback or concerns related to your booking,\n please mail us at orders@savari.com or call us at\n 9625108154",
-          ),
-        ),
-      ),
+      // bottomNavigationBar: const BottomAppBar(
+      //   color: AppStyle.primaryColor,
+      //   child: Padding(
+      //     padding: EdgeInsets.all(8.0),
+      //     child: Text(
+      //       "For any feedback or concerns related to your booking,\n please mail us at orders@savari.com or call us at\n 9625108154",
+      //     ),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(Utils.getWidth(context)) / 50,
         child: Card(
@@ -73,7 +70,7 @@ class _MyAccountState extends State<MyAccount> {
                     ],
                   ),
                 ),
-                MyButton(
+                const MyButton(
                   title: StringManager.update,
                 ),
                 const SizedBox(
@@ -116,26 +113,26 @@ class _MyAccountState extends State<MyAccount> {
                 const SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    side: const BorderSide(
-                      color: AppStyle.primaryColor,
-                    ),
-                    primary: AppStyle.white,
-                    minimumSize: Size(
-                      Utils.getWidth(context) / 3.5,
-                      Utils.getHeight(context) / 20,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const MyBooking()));
-                  },
-                  child: const Text(
-                    StringManager.booking,
-                    style: TextStyle(color: AppStyle.primaryColor),
-                  ),
-                ),
+                // ElevatedButton(
+                //   style: ElevatedButton.styleFrom(
+                //     side: const BorderSide(
+                //       color: AppStyle.primaryColor,
+                //     ),
+                //     primary: AppStyle.white,
+                //     minimumSize: Size(
+                //       Utils.getWidth(context) / 3.5,
+                //       Utils.getHeight(context) / 20,
+                //     ),
+                //   ),
+                //   onPressed: () {
+                //     Navigator.of(context).push(MaterialPageRoute(
+                //         builder: (context) => const MyBooking()));
+                //   },
+                //   child: const Text(
+                //     StringManager.booking,
+                //     style: TextStyle(color: AppStyle.primaryColor),
+                //   ),
+                // ),
               ],
             ),
           ),

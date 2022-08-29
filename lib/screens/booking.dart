@@ -2,7 +2,6 @@ import 'package:car_rental/utils/app_style.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/string_manager.dart';
-import '../widgets/appbar_view.dart';
 
 class MyBooking extends StatefulWidget {
   const MyBooking({Key? key}) : super(key: key);

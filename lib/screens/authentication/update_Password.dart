@@ -1,4 +1,4 @@
-import 'package:car_rental/utils/Utils.dart';
+import 'package:car_rental/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/app_style.dart';

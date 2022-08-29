@@ -1,10 +1,10 @@
-import 'package:car_rental/widgets/button.dart';
+import 'package:car_rental/widgets/my_button.dart';
 import 'package:car_rental/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/app_style.dart';
 import '../../utils/string_manager.dart';
-import '../../utils/Utils.dart';
+import '../../utils/utils.dart';
 
 class Local extends StatefulWidget {
   const Local({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _LocalState extends State<Local> {
                         fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 10),
-                  MyToggleButton(
+                  const MyToggleButton(
                     title: "hello",
                     title1: 'hey',
                   ),
@@ -175,7 +175,7 @@ class _LocalState extends State<Local> {
                         const SizedBox(
                           height: 30,
                         ),
-                        MyButton(
+                        const MyButton(
                           title: StringManager.selectCar,
                         )
                       ],

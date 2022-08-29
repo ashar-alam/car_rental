@@ -12,9 +12,9 @@ class StringManager {
   static const String pickUpAt = 'PICK UP AT';
   static const String selectCar = 'Select Car';
   static const String outStation = 'Outstation';
-  // Local 
+  // Local
   static const String local = 'Local';
-  static const String localHourlyRentals ='Local Hourly Rentals';
+  static const String localHourlyRentals = 'Local Hourly Rentals';
   static const String city = 'CITY';
   static const String airport = 'Airport';
   static const String oneWay = 'One Way';
@@ -87,4 +87,30 @@ class StringManager {
   static const String upconing = 'Upcoming';
   static const String current = 'Current';
   static const String history = 'History';
+
+  // Drawer
+  static const String seeYouSoon = 'SeeYouSoon';
+  static const String wlecomeToSeeYouSoon = 'Wlecome to SeeYouSoon';
+  static const String login = 'Login';
+  static const String createAccount = 'Create an Account';
+  static const String privacyAndPolicy = 'Privacy & Policy';
+  static const String termAndCondition = 'Term & Condition';
+  static const String refundpolicy = 'Refund Policy';
+  static const String aboutUs = 'About Us';
+  static const String whatsapp = 'WhatsApp Now';
+  static const String contactUs = 'Contact Us';
+
+  //loginScreen
+  static const String loginOrCreateAccount = 'Login or Create an Account';
+  static const String mobileNumner = 'Mobile Number';
+
+  //Privacy & Policy
+  static const String privacypolicy = 'PRIVACY POLICY';
+
+  //TermCondition
+  static const String termCondition = 'Terms & Condition';
+  static const String termsUsesSrevice = 'TERMS OF USES & SERVICE';
+
+  //RefundPolicy
+  static const String refundPolicy = 'REFUND POLICY';
 }

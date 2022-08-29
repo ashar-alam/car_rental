@@ -1,4 +1,5 @@
-import 'package:car_rental/utils/Routes.dart';
+import 'package:car_rental/utils/app_style.dart';
+import 'package:car_rental/utils/routes.dart';
 import 'package:car_rental/utils/routes_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,6 +19,12 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: RoutesManager.generateRoute,
       initialRoute: Routes.dashboard,
       theme: ThemeData(
+        inputDecorationTheme: const InputDecorationTheme(
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: AppStyle.primaryColor),
+          ),
+        ),
+        primaryColor: AppStyle.primaryColor,
         fontFamily: GoogleFonts.ubuntu().fontFamily,
       ),
       // home: HomePage(title: 'Flutter Demo'),

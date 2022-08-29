@@ -2,8 +2,8 @@ import 'package:car_rental/utils/app_style.dart';
 import 'package:car_rental/widgets/head_text.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/Utils.dart';
 import '../utils/string_manager.dart';
+import '../utils/utils.dart';
 import '../widgets/appbar_view.dart';
 
 class MyPaymentDetials extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:car_rental/utils/string_manager.dart';
 import 'package:car_rental/widgets/text.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/Utils.dart';
+import '../utils/utils.dart';
 import '../widgets/appbar_view.dart';
 import '../widgets/text_form_feild.dart';
 

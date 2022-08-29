@@ -1,8 +1,8 @@
-import 'package:car_rental/screens/outstation/oneWay.dart';
+import 'package:car_rental/screens/outstation/one_way.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/Utils.dart';
 import '../utils/app_style.dart';
+import '../utils/utils.dart';
 
 class MyButton extends StatelessWidget {
   final String title;

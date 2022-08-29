@@ -1,11 +1,11 @@
-import 'package:car_rental/screens/contactPickUp.dart';
+import 'package:car_rental/screens/contact_pickup.dart';
 import 'package:car_rental/utils/app_style.dart';
 import 'package:car_rental/utils/string_manager.dart';
 import 'package:car_rental/widgets/head_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/assets_manager.dart';
-import '../../utils/Utils.dart';
+import '../../utils/utils.dart';
 
 class OneWay extends StatefulWidget {
   const OneWay({Key? key}) : super(key: key);
@@ -65,17 +65,17 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   MyText(
                     title: StringManager.sedan,
-                    style: const TextStyle(color: AppStyle.primaryColor),
+                    style: TextStyle(color: AppStyle.primaryColor),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 30,
                   ),
                   MyText(
                     title: StringManager.ertiga,
-                    style: const TextStyle(color: AppStyle.black),
+                    style: TextStyle(color: AppStyle.black),
                   ),
                 ],
               ),
@@ -123,17 +123,17 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   MyText(
                     title: StringManager.rent,
-                    style: const TextStyle(color: AppStyle.primaryColor),
+                    style: TextStyle(color: AppStyle.primaryColor),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 50,
                   ),
                   MyText(
                     title: StringManager.rent,
-                    style: const TextStyle(color: AppStyle.black),
+                    style: TextStyle(color: AppStyle.black),
                   ),
                 ],
               ),
@@ -150,31 +150,31 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                           Flexible(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
+                              children: const [
                                 MyText(
                                   title: StringManager.carName,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       color: AppStyle.black, fontSize: 18),
                                 ),
-                                const SizedBox(
+                                SizedBox(
                                   height: 10,
                                 ),
-                                const Text(
+                                Text(
                                   "2000",
                                   style: TextStyle(
                                       fontSize: 25,
                                       color: AppStyle.primaryColor,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                const SizedBox(
+                                SizedBox(
                                   height: 10,
                                 ),
-                                const Text(
+                                Text(
                                   "2299",
                                   style: TextStyle(
                                       fontSize: 20, color: AppStyle.red),
                                 ),
-                                const SizedBox(
+                                SizedBox(
                                   height: 15,
                                 ),
                               ],
@@ -194,10 +194,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          MyText(
+                          const MyText(
                             title: StringManager.timeKm,
-                            style: const TextStyle(
-                                color: AppStyle.black, fontSize: 12),
+                            style:
+                                TextStyle(color: AppStyle.black, fontSize: 12),
                           ),
                           Container(
                             padding: const EdgeInsets.all(4.0),
@@ -209,10 +209,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                             child: const Icon(Icons.airline_seat_legroom_extra,
                                 size: 16, color: AppStyle.grey),
                           ),
-                          MyText(
+                          const MyText(
                             title: "4 Seater",
-                            style: const TextStyle(
-                                color: AppStyle.black, fontSize: 15),
+                            style:
+                                TextStyle(color: AppStyle.black, fontSize: 15),
                           ),
                           const SizedBox(
                             width: 15,
@@ -227,10 +227,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                             child: const Icon(Icons.luggage,
                                 size: 16, color: AppStyle.grey),
                           ),
-                          MyText(
+                          const MyText(
                             title: "2 bags",
-                            style: const TextStyle(
-                                color: AppStyle.black, fontSize: 15),
+                            style:
+                                TextStyle(color: AppStyle.black, fontSize: 15),
                           ),
                           const SizedBox(
                             width: 15,
@@ -245,10 +245,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                             child: const Icon(Icons.ac_unit,
                                 size: 16, color: AppStyle.grey),
                           ),
-                          MyText(
+                          const MyText(
                             title: " AC",
-                            style: const TextStyle(
-                                color: AppStyle.black, fontSize: 15),
+                            style:
+                                TextStyle(color: AppStyle.black, fontSize: 15),
                           ),
                         ],
                       ),
@@ -350,10 +350,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: StringManager.fuelChange,
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -377,10 +377,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: StringManager.driverAllowance,
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -404,10 +404,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: StringManager.gst,
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -440,10 +440,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: "Pay 13/km after 80kms",
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -467,10 +467,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: "Pay 144/hrafter 8 hours",
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -494,10 +494,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: StringManager.tollTax,
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
@@ -519,10 +519,10 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        MyText(
+                                        const MyText(
                                           title: StringManager.nightAllowance,
-                                          style: const TextStyle(
-                                              color: AppStyle.black),
+                                          style:
+                                              TextStyle(color: AppStyle.black),
                                         ),
                                       ],
                                     ),
