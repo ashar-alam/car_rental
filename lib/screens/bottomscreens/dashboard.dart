@@ -1,6 +1,9 @@
 import 'package:car_rental/screens/account.dart';
 import 'package:car_rental/screens/authentication/login.dart';
+import 'package:car_rental/screens/authentication/outside_login.dart';
 import 'package:car_rental/screens/booking.dart';
+import 'package:car_rental/screens/drawer/about_us.dart';
+import 'package:car_rental/screens/drawer/contact_us.dart';
 import 'package:car_rental/screens/drawer/privacy_policy.dart';
 import 'package:car_rental/screens/drawer/refund_policy.dart';
 import 'package:car_rental/screens/drawer/term_condition.dart';
@@ -320,7 +323,7 @@ class _DashboardState extends State<Dashboard> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const MyRefundPolicy(),
+                    builder: (context) => const MyAboutus(),
                   ),
                 );
               },
@@ -336,7 +339,7 @@ class _DashboardState extends State<Dashboard> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const MyRefundPolicy(),
+                    builder: (context) => const MyOutsideLogin(),
                   ),
                 );
               },
@@ -352,7 +355,7 @@ class _DashboardState extends State<Dashboard> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const MyRefundPolicy(),
+                    builder: (context) => const MyContactus(),
                   ),
                 );
               },

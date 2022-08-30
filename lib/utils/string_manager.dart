@@ -113,4 +113,12 @@ class StringManager {
 
   //RefundPolicy
   static const String refundPolicy = 'REFUND POLICY';
+
+  //ContactUs
+  static const String seeYouSoonContactus = 'SeeYouSoon - Contact Us';
+  static const String help = '24X7 HELP';
+  static const String mobileNo = 'Mobile: +919925108154';
+  static const String emailId = 'Email Id: info@seeyousoon.com';
+  static const String delhiAddress = 'Delhi Address';
+  static const String address = 'Jamina Nagar Okhla new Delhi 110025 - INDIA';
 }
