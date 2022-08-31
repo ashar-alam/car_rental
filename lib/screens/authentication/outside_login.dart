@@ -30,13 +30,13 @@ class _MyOutsideLoginState extends State<MyOutsideLogin> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const <Widget>[
-                  Text(
-                    "Login",
-                    style: TextStyle(color: Colors.white, fontSize: 40),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
+                  // Text(
+                  //   "Login",
+                  //   style: TextStyle(color: Colors.white, fontSize: 40),
+                  // ),
+                  // SizedBox(
+                  //   height: 10,
+                  // ),
                   Text(
                     "Welcome Back",
                     style: TextStyle(color: Colors.white, fontSize: 18),
