@@ -12,7 +12,7 @@ import 'package:car_rental/utils/string_manager.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/appbar_view.dart';
-import '../home.dart';
+import 'home.dart';
 import 'airport.dart';
 import 'local.dart';
 

@@ -1,4 +1,4 @@
-import 'package:car_rental/screens/home.dart';
+import 'package:car_rental/screens/bottomscreens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

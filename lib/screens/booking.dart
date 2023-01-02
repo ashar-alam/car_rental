@@ -28,7 +28,8 @@ class _MyBookingState extends State<MyBooking>
       //   title: StringManager.booking,
       //   actions: [],
       // ),
-      body: Padding(
+      body:
+       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           decoration: BoxDecoration(

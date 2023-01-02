@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         minimumSize: Size(
           Utils.getWidth(context) / 1.1,
-          Utils.getHeight(context) / 20,
+          Utils.getHeight(context) / 15,
         ),
       ),
       onPressed: () {
@@ -28,7 +28,7 @@ class MyButton extends StatelessWidget {
       },
       child: Text(
         title,
-        style: const TextStyle(fontSize: 15),
+        style: const TextStyle(fontSize: 18),
       ),
     );
   }

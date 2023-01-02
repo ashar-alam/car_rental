@@ -9,6 +9,7 @@ class StringManager {
   static const String from = 'FROM';
   static const String to = 'To';
   static const String pickUp = 'PICK UP';
+  static const String returndate = 'RETURN';
   static const String pickUpAt = 'PICK UP AT';
   static const String selectCar = 'Select Car';
   static const String outStation = 'Outstation';

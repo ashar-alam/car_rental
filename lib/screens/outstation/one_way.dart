@@ -257,7 +257,7 @@ class _OneWayState extends State<OneWay> with SingleTickerProviderStateMixin {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: AppStyle.primaryColor,
+                          backgroundColor: AppStyle.primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),

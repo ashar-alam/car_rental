@@ -1,6 +1,6 @@
 import 'package:car_rental/screens/bottomscreens/dashboard.dart';
 import 'package:flutter/material.dart';
-import '../screens/home.dart';
+import '../screens/bottomscreens/home.dart';
 import 'routes.dart';
 
 class RoutesManager {

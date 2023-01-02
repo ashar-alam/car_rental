@@ -14,36 +14,37 @@ class _MyOutsideLoginState extends State<MyOutsideLogin> {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-          Colors.orange[900]!,
-          Colors.orange[800]!,
-          Colors.orange[400]!
-        ])),
+          gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+            Colors.orange[900]!,
+            Colors.orange[800]!,
+            Colors.orange[400]!
+          ]),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const SizedBox(
               height: 80,
             ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
-                  // Text(
-                  //   "Login",
-                  //   style: TextStyle(color: Colors.white, fontSize: 40),
-                  // ),
-                  // SizedBox(
-                  //   height: 10,
-                  // ),
-                  Text(
-                    "Welcome Back",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(20),
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: const <Widget>[
+            //       // Text(
+            //       //   "Login",
+            //       //   style: TextStyle(color: Colors.white, fontSize: 40),
+            //       // ),
+            //       // SizedBox(
+            //       //   height: 10,
+            //       // ),
+            //       Text(
+            //         "Welcome Back",
+            //         style: TextStyle(color: Colors.white, fontSize: 18),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             const SizedBox(height: 20),
             Expanded(
               child: Container(
@@ -51,7 +52,9 @@ class _MyOutsideLoginState extends State<MyOutsideLogin> {
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
-                        topRight: Radius.circular(60))),
+                        topRight: Radius.circular(60),
+                        ),
+                        ),
                 child: SingleChildScrollView(
                   child: Padding(
                     padding: const EdgeInsets.all(30),
@@ -70,36 +73,36 @@ class _MyOutsideLoginState extends State<MyOutsideLogin> {
                                     blurRadius: 20,
                                     offset: Offset(0, 10))
                               ]),
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                padding: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: Colors.grey[200]!))),
-                                child: const TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Email or Phone number",
-                                      hintStyle: TextStyle(color: Colors.grey),
-                                      border: InputBorder.none),
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: Colors.grey[200]!))),
-                                child: const TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Password",
-                                      hintStyle: TextStyle(color: Colors.grey),
-                                      border: InputBorder.none),
-                                ),
-                              ),
-                            ],
-                          ),
+                          // child: Column(
+                          //   children: <Widget>[
+                          //     Container(
+                          //       padding: const EdgeInsets.all(10),
+                          //       decoration: BoxDecoration(
+                          //           border: Border(
+                          //               bottom: BorderSide(
+                          //                   color: Colors.grey[200]!))),
+                          //       child: const TextField(
+                          //         decoration: InputDecoration(
+                          //             hintText: "Email or Phone number",
+                          //             hintStyle: TextStyle(color: Colors.grey),
+                          //             border: InputBorder.none),
+                          //       ),
+                          //     ),
+                          //     Container(
+                          //       padding: const EdgeInsets.all(10),
+                          //       decoration: BoxDecoration(
+                          //           border: Border(
+                          //               bottom: BorderSide(
+                          //                   color: Colors.grey[200]!))),
+                          //       child: const TextField(
+                          //         decoration: InputDecoration(
+                          //             hintText: "Password",
+                          //             hintStyle: TextStyle(color: Colors.grey),
+                          //             border: InputBorder.none),
+                          //       ),
+                          //     ),
+                          //   ],
+                          // ),
                         ),
 
                         // const Text(
